@@ -1,0 +1,16 @@
+[
+    {
+        "name":"North Wilksboro Speedway",
+        "desc":"Now in iRacing!",
+        "imgUrls":["https://imgurl.com","https://google.com"],
+        "urls":["https://google.com","https://facebook.com"],
+        "lengthMeters":2500,
+        "lat":36.78,
+        "lng":-76.99,
+        "fullAddress":"123 Speedway Way",
+        "yearOpen":1955,
+        "yearClosed":2005,
+        "type":"oval",
+        "surface":"asphalt"
+    }
+]
