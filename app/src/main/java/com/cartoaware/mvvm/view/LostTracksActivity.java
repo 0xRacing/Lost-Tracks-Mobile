@@ -1,6 +1,8 @@
 package com.cartoaware.mvvm.view;
 
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -40,11 +42,13 @@ public class LostTracksActivity extends AppCompatActivity {
     }
 
     private void setupLocationUpdates() {
+        binding.trackLoading.setVisibility(View.VISIBLE);
         tracksViewModel.fetchLostTracks();
         tracksViewModel.getLostTracks().observe(this, response -> {
             if (response != null) {
                 trackArrayList.addAll(response);
                 trackAdapter.notifyDataSetChanged();
+                binding.trackLoading.setVisibility(View.GONE);
             }
         });
     }
